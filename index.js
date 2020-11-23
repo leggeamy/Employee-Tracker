@@ -82,11 +82,20 @@ function loadMainPrompts() {
     )
 }
 
-//View Departments
+//View All Departments
 
-//View Roles
+//View All Roles
 
-//View Employees
+//View All Employees
+function viewEmployees() {
+    db.findAllEmployees()
+    .then(([rows]) => {
+        let employees = rows;
+        console.log("\n");
+        console.table(employees);
+    })
+    .then(() => loadMainPrompts());
+}
 
 //Add a Department
 
