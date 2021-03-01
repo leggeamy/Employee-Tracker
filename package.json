@@ -4,19 +4,21 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "ascii-art": "^2.5.0",
+    "asciiart-logo": "^0.2.6",
     "console.table": "^0.10.0",
-    "express": "^4.17.1",
     "inquirer": "^7.3.3",
+    "logo": "^0.2.0",
     "mysql2": "^2.2.5",
-    "sqlite3": "^5.0.0"
+    "save": "^2.4.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "sqlite3 db/tracker.db < db/schema.sql",
-    "seed": "sqlite3 db/tracker.db < db/seeds.sql",
-    "db": "sqlite3 db/tracker.db",
-    "start": "node server.js"
+    "migrate": "mysql db/employees.db < db/schema.sql",
+    "seed": "mysql db/employees.db < db/seed.sql",
+    "db": "mysql db/employees.db",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
